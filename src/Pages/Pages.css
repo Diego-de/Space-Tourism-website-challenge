@@ -997,6 +997,7 @@ li {
 
     .home .homeChil {
         align-items: baseline;
+        margin: 0;
     }
 
     .home .homeChil div h3 {
@@ -1063,6 +1064,16 @@ li {
         margin-bottom: 36px;
     }
 
+    
+    .destinatiopPage .destChil2  .nav{
+        margin-top: 26px;
+    }
+
+    .destinatiopPage .destChil2  .nav .navbar{
+        margin: 0;
+    }
+
+
 
     .destinatiopPage .destChil2 .navbar li {
         display: flex;
@@ -1094,8 +1105,6 @@ li {
         line-height: 25px;
         margin: 0;
     }
-
-
 
     .destinatiopPage .destChil2 .infoPlanet2 {
         flex-direction: column;

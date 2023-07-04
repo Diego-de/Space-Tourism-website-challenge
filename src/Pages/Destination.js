@@ -54,7 +54,7 @@ function Destination() {
             </div>
 
             <div className='destChil2'>
-                <div>
+                <div className='nav'>
                     <ul className='navbar'>
                         <li>
                             <button onClick={() => handleLinkClick('MOON', 0)} className={activeLink === 'MOON' ? 'active' : ''}>MOON</button>
