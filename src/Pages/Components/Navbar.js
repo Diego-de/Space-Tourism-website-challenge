@@ -32,19 +32,19 @@ function Navbar() {
         document.body.style.backgroundImage = localStorage.getItem('background');
 
         const handleResize = () => {
-            if (window.innerWidth <= 768 && window.innerWidth > 375) {
+            if (window.innerWidth <= 768 && window.innerWidth > 425) {
                 setIsResponsive(window.innerWidth <= 768);
             } else if (window.innerWidth <= 375) {
-                setIsResponsive(window.innerWidth <= 375);
+                setIsResponsive(window.innerWidth <= 425);
             }
 
         };
 
-        if (window.innerWidth <= 768 && window.innerWidth > 375) {
+        if (window.innerWidth <= 768 && window.innerWidth > 425) {
             setIsResponsive(window.innerWidth <= 768);
             window.addEventListener('resize', handleResize);
-        } else if (window.innerWidth <= 375) {
-            setIsResponsive(window.innerWidth <= 375);
+        } else if (window.innerWidth <= 425) {
+            setIsResponsive(window.innerWidth <= 425);
             window.addEventListener('resize', handleResize);
         }
 
@@ -63,7 +63,7 @@ function Navbar() {
 
 
         if (isResponsive) {
-            if (isResponsive > 375 && isResponsive <= 768) {
+            if (isResponsive > 425 && isResponsive <= 768) {
                 if (link === '/') {
                     backgroundImage = `url(${backgroundHomeTB})`;
 
@@ -77,7 +77,7 @@ function Navbar() {
                     backgroundImage = `url(${backgroundTechTB})`;
 
                 }
-            } else if (isResponsive < 375) {
+            } else if (isResponsive < 425) {
 
                 if (link === '/') {
                     backgroundImage = `url(${backgroundHomeMB})`;
