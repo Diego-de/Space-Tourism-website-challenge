@@ -1046,6 +1046,10 @@ li {
 
     /*-------------DESTINATION MOBILE-------------*/
 
+    .destinatiopPage {
+        height: 100%;
+    }
+
     .destinatiopPage .destChil div {
         display: flex;
         text-align: center;
@@ -1109,11 +1113,6 @@ li {
         padding-top: 32px;
     }
 
-    
-    .destinatiopPage .destChil2 .infoPlanet2 .chil2{
-        margin-bottom: 10%;
-    }
-
 
     .destinatiopPage .destChil2 .infoPlanet2 p {
         font-size: 14px;
@@ -1132,6 +1131,7 @@ li {
     .crewPage {
         flex-direction: column-reverse;
         position: relative;
+        height: 100%;
     }
 
 
@@ -1171,6 +1171,7 @@ li {
         font-size:15px;
         line-height: 25px;
         width: 90%;
+        margin-bottom: 5%;
     }
 
 
@@ -1210,6 +1211,7 @@ li {
 
     .techPage{
         position: relative;
+        height: 100%;
     }
     
 
@@ -1270,8 +1272,9 @@ li {
     .techPage .techChil .itens .itenChild .description p {
         font-size: 15px;
         width: 100%;
-        line-height: 25px;
+        line-height: 20px;
         text-align: center;
+        margin-bottom: 5%;
     }
 
 
