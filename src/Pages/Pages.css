@@ -425,7 +425,7 @@ nav ul li a {
     font-size: 16px;
     font-family: 'barlow condensed';
     margin: 0;
-  
+
 }
 
 
@@ -862,7 +862,7 @@ li {
         margin: 70px 0px 0px 0px;
     }
 
-    .techPage .TechChil2 div img{
+    .techPage .TechChil2 div img {
         width: 100%;
         height: 310px;
     }
@@ -997,6 +997,10 @@ li {
     /*-------------HOME MOBILE-------------*/
 
     .home .homeChil {
+        height: 100%;
+    }
+
+    .home .homeChil {
         align-items: baseline;
         margin: 0;
     }
@@ -1046,19 +1050,18 @@ li {
 
     /*-------------DESTINATION MOBILE-------------*/
 
-    .destinatiopPage {
-        height: 100%;
-    }
+
 
     .destinatiopPage .destChil div {
         display: flex;
         text-align: center;
+    
     }
 
     .destinatiopPage .destChil div p {
         font-size: 16px;
         letter-spacing: 2, 7px;
-        margin: 24px 0px 32px 5px;
+        margin: 0px 0px 25px 5px;
     }
 
     .destinatiopPage .destChil div img {
@@ -1066,11 +1069,15 @@ li {
         width: 170px;
         height: 170px;
         margin: 0;
-        margin-bottom: 20%;
+    }
+
+    .destinatiopPage .destChil2 {
+        height: auto;
+        margin-top: 5%;
     }
 
 
-    .destinatiopPage .destChil2  .nav .navbar{
+    .destinatiopPage .destChil2 .nav .navbar {
         margin: 0;
     }
 
@@ -1131,14 +1138,12 @@ li {
     .crewPage {
         flex-direction: column-reverse;
         position: relative;
-        height: 100%;
+        margin: 0;
     }
-
 
     .crewPage .crewChil .itens {
         display: flex;
         flex-direction: column-reverse;
-
     }
 
 
@@ -1163,42 +1168,42 @@ li {
         right: 0;
         left: 0;
         margin-top: 0px;
+        margin: 0;
 
     }
 
     .crewPage .crewChil .itens p {
-        margin: 0;
-        font-size:15px;
-        line-height: 25px;
+        font-size: 15px;
+        line-height: 20px;
         width: 90%;
-        margin-bottom: 5%;
+        padding-bottom: 5%;
     }
 
 
 
-    
+
     .crewPage .crewChil .indicator {
         display: flex;
         justify-content: center;
-        margin: 32px 0px 32px 0px;
+        margin: 30px 0px 30px 0px;
         padding-left: 0;
         z-index: 1;
     }
-    
-    .crewPage .crewChil2{
+
+    .crewPage .crewChil2 {
         margin-top: 52px;
         display: flex;
         justify-content: center;
         width: 100%;
     }
 
-    .crewPage .crewChil2 div{
+    .crewPage .crewChil2 div {
         display: flex;
         justify-content: center;
         width: 90%;
         border-bottom: 1px solid #383B4B;
     }
-    
+
 
     .crewPage .crewChil2 img {
         width: 177px;
@@ -1209,15 +1214,15 @@ li {
 
     /*-------------TECH MOBILE-------------*/
 
-    .techPage{
+    .techPage {
         position: relative;
         height: 100%;
     }
-    
 
-    .techPage .techChil .itens{
-      text-align: center;
-      
+
+    .techPage .techChil .itens {
+        text-align: center;
+
     }
 
 
@@ -1258,7 +1263,7 @@ li {
     .techPage .techChil .itens .itenChild .description h1 {
         font-size: 24px;
         margin: 9px 0px 16px 0px;
-    
+
     }
 
 
@@ -1268,7 +1273,7 @@ li {
     }
 
 
-    
+
     .techPage .techChil .itens .itenChild .description p {
         font-size: 15px;
         width: 100%;
@@ -1286,7 +1291,7 @@ li {
         font-size: 16px;
         font-family: 'barlow condensed';
         letter-spacing: 2.7px;
-    
+
     }
 
 
@@ -1294,7 +1299,7 @@ li {
         margin: 58px 0px 0px 0px;
     }
 
-    .techPage .TechChil2 div img{
+    .techPage .TechChil2 div img {
         width: 100%;
         height: 170px;
     }
@@ -1306,27 +1311,11 @@ li {
         margin: 0px 0px 0px 0px;
         font-size: 16px;
     }
-    
+
     .techPage .techChil .itens .itenChild .indicator li button.active {
         background-color: #FFFFFF;
         color: black;
     }
-    
+
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
