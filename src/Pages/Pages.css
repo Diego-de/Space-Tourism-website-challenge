@@ -241,7 +241,8 @@ nav ul li a {
 }
 
 .destinatiopPage .destChil2 .navbar button.active {
-    border-bottom: 2px solid #D0D6F9;
+    border-bottom: 2px solid #FFFFFF;
+    color: #FFFFFF;
 }
 
 
@@ -348,7 +349,8 @@ nav ul li a {
 }
 
 .crewPage .crewChil .indicator li.active {
-    border-bottom: 2px solid #D0D6F9;
+    border-bottom: 2px solid #FFFFFF;
+    background-color: #FFFFFF;
 }
 
 

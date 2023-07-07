@@ -5,8 +5,8 @@ import {useEffect } from 'react';
 
 function Home() {
 
-    const click =() =>{
-        localStorage.removeItem('background')
+    const background = (background) =>{
+        localStorage.setItem('underline', background)
     }
 
     return (
@@ -19,8 +19,7 @@ function Home() {
                 </div>
             </div>
             <div className='homeChil2'>
-                <button > <Link to='/destination' >EXPLORE</Link></button>
-                <button style={{display:'none'}} onClick={click()}>Clear</button>
+                <button onClick={() => background('destination')}> <Link to='/destination'>EXPLORE</Link></button>
             </div>
         </div>
     );

@@ -24,13 +24,13 @@ function Navbar() {
 
 
     const [isResponsive, setIsResponsive] = useState();
-    const [activeLink, setActiveLink] = useState('');
+    const [activeLink, setActiveLink] = useState();
+
 
 
     useEffect(() => {
 
         document.body.style.backgroundImage = localStorage.getItem('background');
-
         const handleResize = () => {
             if (window.innerWidth <= 768 && window.innerWidth > 425) {
                 setIsResponsive(window.innerWidth <= 768);
@@ -57,8 +57,11 @@ function Navbar() {
 
     const handleLinkClick = (link) => {
 
-        setActiveLink(link);
-        localStorage.removeItem('')
+        localStorage.setItem('underline', link);
+        const under = localStorage.getItem('underline')
+        setActiveLink(under);
+
+
         let backgroundImage = '';
 
 
@@ -109,8 +112,12 @@ function Navbar() {
         const bodyElement = document.querySelector('body');
         bodyElement.style.backgroundImage = backgroundImage;
         localStorage.setItem('background', backgroundImage);
-
     };
+
+    useEffect(() => {
+        const link = localStorage.getItem('underline');
+        handleLinkClick(link);
+    }, []);
 
     return (
         <div className='navMain'>
@@ -124,7 +131,6 @@ function Navbar() {
                     <ul className='child'>
                         <label htmlFor="menu-toggle" className="close-icon"><p>&#10006;</p></label>
                         <li className={activeLink === '/' ? 'active' : ''}>
-
                             <Link to='/' onClick={() => handleLinkClick('/')}><span>00</span> HOME</Link>
                             {activeLink === '/' && <span className="underline"></span>}
                         </li>
