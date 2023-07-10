@@ -2,6 +2,7 @@ body{
     background-image: url('./starter-code/assets/home/background-home-desktop.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100%;
 }
 
 @media screen and (max-width: 1024px) {
@@ -19,7 +20,6 @@ body{
         background-image: url('./starter-code/assets/home/background-home-tablet.jpg');
         background-repeat: no-repeat;
         background-size: cover;
-        height: 100vh;
     } 
 }
 

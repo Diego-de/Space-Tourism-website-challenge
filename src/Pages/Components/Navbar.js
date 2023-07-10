@@ -31,14 +31,16 @@ function Navbar() {
     useEffect(() => {
 
         document.body.style.backgroundImage = localStorage.getItem('background');
+        
         const handleResize = () => {
             if (window.innerWidth <= 768 && window.innerWidth > 425) {
-                setIsResponsive(window.innerWidth <= 768);
-            } else if (window.innerWidth <= 375) {
-                setIsResponsive(window.innerWidth <= 425);
+              setIsResponsive(true);
+            } else if (window.innerWidth <= 425) {
+              setIsResponsive(true);
+            } else {
+              setIsResponsive(false);
             }
-
-        };
+          };
 
         if (window.innerWidth <= 768 && window.innerWidth > 425) {
             setIsResponsive(window.innerWidth <= 768);
@@ -55,7 +57,10 @@ function Navbar() {
     }, []);
 
 
+
     const handleLinkClick = (link) => {
+        localStorage.removeItem('background');
+
 
         localStorage.setItem('underline', link);
         const under = localStorage.getItem('underline')
@@ -64,9 +69,23 @@ function Navbar() {
 
         let backgroundImage = '';
 
+        if (link === '/') {
+            backgroundImage = `url(${backgroundHome})`;
 
+        } else if (link === 'destination') {
+            backgroundImage = `url(${backgroundDest})`;
+
+        } else if (link === 'crew') {
+            backgroundImage = `url(${backgroundCrew})`;
+
+        } else if (link === 'tech') {
+            backgroundImage = `url(${backgroundTech})`;
+        }
+        
         if (isResponsive) {
-            if (isResponsive > 425 && isResponsive <= 768) {
+            console.log('pegou')
+            if (isResponsive && window.innerWidth > 425 && window.innerWidth <= 768) {
+
                 if (link === '/') {
                     backgroundImage = `url(${backgroundHomeTB})`;
 
@@ -80,8 +99,8 @@ function Navbar() {
                     backgroundImage = `url(${backgroundTechTB})`;
 
                 }
-            } else if (isResponsive < 425) {
 
+            } else if (isResponsive && window.innerWidth <= 425) {
                 if (link === '/') {
                     backgroundImage = `url(${backgroundHomeMB})`;
 
@@ -95,19 +114,8 @@ function Navbar() {
                     backgroundImage = `url(${backgroundTechMB})`;
 
                 }
+
             }
-        } else if (link === '/') {
-            backgroundImage = `url(${backgroundHome})`;
-
-        } else if (link === 'destination') {
-            backgroundImage = `url(${backgroundDest})`;
-
-        } else if (link === 'crew') {
-            backgroundImage = `url(${backgroundCrew})`;
-
-        } else if (link === 'tech') {
-            backgroundImage = `url(${backgroundTech})`;
-
         }
         const bodyElement = document.querySelector('body');
         bodyElement.style.backgroundImage = backgroundImage;

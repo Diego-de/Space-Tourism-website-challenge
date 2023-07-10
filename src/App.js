@@ -8,10 +8,7 @@ import Technology from './Pages/Technology';
 
 
 function App() {
-
-
   return (
-    <div className='App'>
       <BrowserRouter>
         <Navbar/>
 
@@ -22,7 +19,6 @@ function App() {
           <Route path="/tech" element={<Technology />} />
         </Routes>
       </BrowserRouter>
-    </div>  
   );
 }
 
